@@ -5,8 +5,8 @@
 |------|----|-------|
 |body|text|
 |image|string|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 <!-- null:  false　は、NOT NULL制約 -->
 <!-- foreign_key: true　は、外部キー制約 -->
 
@@ -18,8 +18,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|email|string|null: false, unique: true|
-<!-- unique: true　は、一意性制約 -->
 
 ### Association
 - has_many :members
@@ -29,7 +27,8 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, unique: true|
+|name|string|null: false, unique: true|
+<!-- unique: true　は、一意性制約 -->
 
 ### Association
 - has_many :members
@@ -39,8 +38,8 @@
 ## memebersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
