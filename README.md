@@ -5,8 +5,8 @@
 |------|----|-------|
 |body|text|
 |image|string|
-|user_id|references|null: false, foreign_key: true|
-|group_id|references|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 <!-- null:  false　は、NOT NULL制約 -->
 <!-- foreign_key: true　は、外部キー制約 -->
 
@@ -38,8 +38,8 @@
 ## memebersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null: false, foreign_key: true|
-|group_id|references|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
