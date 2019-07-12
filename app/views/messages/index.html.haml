@@ -1,0 +1,44 @@
+!!!
+%html{lang: "ja"}
+  
+%head
+  %meta{charset: "utf-8"}
+%body
+
+.chat--side
+  .side--header
+    %side--header__box
+    %side--header__box__username
+    akkun
+    %side--header__box__menu
+    %side-header__box__menu__new-group
+    %a{:href => "/users/edit"}
+    %i.fa.fa-edit
+    %side-header__box__menu__edit-user
+    %a{:href => "/users/edit"}
+    %i.fa.fa-cog
+
+  .groups
+    .groups__name
+      博多部
+    .groups__title
+      まだメッセージがありません
+
+.chat--main
+  .main--header
+    %main--header__box
+    .main--header__box__current--group
+    博多部
+    %edit
+    Edit
+    .main--header__box__current--user
+    Member : akkun
+    
+  .main--space
+    こんにちわ！
+  
+  .input--box
+    type a message
+    %i.fa.fa-image
+    %send
+    Send
