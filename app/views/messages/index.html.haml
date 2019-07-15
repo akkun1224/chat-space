@@ -7,11 +7,11 @@
 
 .chat--side
   .side--header
-    %side--header__box
-    %side--header__box__username
+    .side--header__box
+    .side--header__box__username
     akkun
-    %side--header__box__menu
-    %side-header__box__menu__new-group
+    .side--header__box__menu
+    .side-header__box__menu__new-group
     %a{:href => "/users/edit"}
     %i.fa.fa-edit
     %side-header__box__menu__edit-user
@@ -26,19 +26,34 @@
 
 .chat--main
   .main--header
-    %main--header__box
     .main--header__box__current--group
-    博多部
-    %edit
-    Edit
+      博多部
+    .main--header__box__edit--btn
+      Edit
     .main--header__box__current--user
-    Member : akkun
+      Member : akkun
     
   .main--space
-    こんにちわ！
+    .main--space__box1
+      .main--space__box1__user
+        akkun
+      .main--space__box1__time
+        2019/07/14(Sat) 23:59:59
+      .main--space__box1__message
+        おつかれさま！
+    .main--space__box2  
+      .main--space__box2__user
+        test-user
+      .main--space__box2__time
+        2019/07/15(Sat) 23:59:59
+      .main--space__box2__message
+        おいさっ！
   
-  .input--box
-    type a message
-    %i.fa.fa-image
-    %send
-    Send
+  .input--erea
+    .input--erea__box
+      .input--erea__box__comment
+        type a message
+      .input--erea__box__imgbtn
+        %i.fa.fa-image
+    .input--erea__send
+      Send

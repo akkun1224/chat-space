@@ -11,6 +11,9 @@
   align-items: center;
   padding: 0 20px;
   font-size: 16px;
+  &__box__menu{
+    margin: 0 0 0 auto;
+  }
 }
 
 .groups {
@@ -27,29 +30,118 @@
 }
 
 .chat--main {
-
+  float: right;
+  width: calc(100vw - 300px);
 }
 
 .main--header {
   border: #eeeeee;
   height: 100px;
-  padding: 0 40px;
+  padding: 0 40px 0 40px;
   display: flex;
   border-bottom: solid 1px #eee;
   font-size: 20px;
-  color: #333333
+  color: #333333;
+  &__box__current--group{
+    margin: 35px auto 0 0;
+    float:left;
+  }
+  &__box__edit--btn{
+    margin: 28px 0 32px auto;
+    height: 40px;
+    padding: 5px 20px 0 20px;
+    border: solid 1px blue;
+    color: blue;
+    float: right;
+  }
+  &__box__current--user{
+    font-size: 12px;
+    position: absolute;
+    top: calc(35px + 20px + 15px);
+    //height: calc(35px + 20px);
+  }
 }
 
 .main--space {
-  height: calc(100vh - 190px);
+  height: calc(100vh - 293px);
   padding: 46px 40px;
   background-color: #fafafa;
   overflow: scroll;
-  font-size: 12px;
+  &__box1{
+    &__user{
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 10px 10px 0;
+      float: left;
+    }
+    &__time{
+      font-size: 12px;
+      color: #999999;
+    }
+    &__message{
+      position: absolute;
+      margin: 10px 0 0 0;
+      font-size: 14px;
+      color :#434A54;
+    }
+  }
+  &__box2{
+    position: relative;
+    clear: left;
+    margin: 64px 0 0 0;
+    &__user{
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 10px 10px 0;
+      float: left;
+    }
+    &__time{
+      font-size: 12px;
+      color: #999999;
+     }
+    &__message{
+      position: absolute;
+      margin: 10px 0 0 0;
+      font-size: 14px;
+      color :#434A54;
+    }
+  }
 }
 
-.input--box {
-  height: 90px;
+.input--erea {
+  height: 80px;
   padding: 20px 40px;
-  background: #ddd
+  background: #ddd;
+  &__box{
+    height: 50px;
+    width: 85%;
+    background: white;
+    padding: 17px 10px 17px 10px;
+    color: #434A54;
+    float: left;
+    &__comment{
+      width: 90%;
+      float:left;
+      padding: 17px 10px 17px 10px;
+      font-size: 16px;
+    }
+    &__imgbtn{
+      width: 10%;
+      //float:right;
+      //position: fixed;
+      margin: 0 0 0 auto;
+      padding: 0 0 0 0;
+      font-size: 30px;
+    }
+  }
+  &__send{
+    height: 50px;
+    width: 8%;
+    padding: 15px 0 15px 15px;
+    float: right;
+    background: #38AEF0;
+    color: white;
+    font-size: 23px;
+    margin-left: 15px;
+  }
 }
