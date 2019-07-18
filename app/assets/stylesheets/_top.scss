@@ -2,8 +2,7 @@
   width: 300px;
   float: left;
   font-weight: bold;
-  //color: $side-color;
-  color: #FFFFFF;
+  color: $side-color;
 }
 
 .side--header {
@@ -13,8 +12,15 @@
   align-items: center;
   padding: 0 20px;
   font-size: 16px;
-  &__box__menu{
-    margin: 0 0 0 auto;
+  &__box{
+    &__username{
+    float: left;
+    }
+    &__menu{
+    float: right;
+    margin: 0 0 0 150px;
+    color: $side-color;
+    }
   }
 }
 
@@ -82,8 +88,7 @@
       position: absolute;
       margin: 10px 0 0 0;
       font-size: 14px;
-      //color: $thin-color;
-      color: #434A54;
+      color: $thin-color;
     }
   }
   &__box2{
@@ -104,8 +109,7 @@
       position: absolute;
       margin: 10px 0 0 0;
       font-size: 14px;
-      //color: $thin-color;
-      color: #434A54;
+      color: $thin-color;
     }
   }
 }
@@ -114,12 +118,9 @@
   background: #ddd;
   height: 90px;
   &__box {
-    // height: 50px;
     width: 85%;
-    //background: white;
     padding: 17px 10px 17px 40px;
-    //color: $thin-color;
-    color: #434A54;
+    color: $thin-color;
     float: left;
     &__comment{
       height: 50px;
@@ -141,11 +142,9 @@
   &__send{
     height: 50px;
     width: 8%;
-    //padding: 17px 0 17px auto;
     float: right;
     background: #38AEF0;
-    //color: $side-color;
-    color: #FFFFFF;
+    color: $side-color;
     font-size: 23px;
     margin: 17px 40px 17px auto;
   }

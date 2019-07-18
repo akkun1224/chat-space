@@ -1,22 +1,15 @@
-!!!
-%html{lang: "ja"}
-  
-%head
-  %meta{charset: "utf-8"}
-%body
-
 .chat--side
   .side--header
     .side--header__box
-    .side--header__box__username
-    akkun
-    .side--header__box__menu
-    .side-header__box__menu__new-group
-    %a{:href => "/users/edit"}
-    %i.fa.fa-edit
-    %side-header__box__menu__edit-user
-    %a{:href => "/users/edit"}
-    %i.fa.fa-cog
+      .side--header__box__username
+        akkun
+      .side--header__box__menu
+        %side-header__box__menu__new-group
+        = link_to root_path do
+          %i.fa.fa-edit
+        %side-header__box__menu__edit-user
+        = link_to root_path do
+          %i.fa.fa-cog
 
   .groups
     .groups__name
@@ -50,11 +43,11 @@
         おいさっ！
 
   .input--erea
-    %form.input--erea__box{:action => "/form.php", :method => "post"}
-      %input.input--erea__box__comment{:name => "message", :placeholder =>"type a message"}
+    %form.input--erea__box{action: "/form.php", method: "post"}
+      %input.input--erea__box__comment{name: "message", placeholder: "type a message"}
       .input--erea__box__imgbtn
         %i.fa.fa-image
-    %input.input--erea__send{:type => "submit", :value => "Send"}/
+    %input.input--erea__send{type: "submit", value: "Send"}/
     
 
     -# .input--erea
