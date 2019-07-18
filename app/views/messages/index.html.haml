@@ -48,12 +48,20 @@
         2019/07/15(Sat) 23:59:59
       .main--space__box2__message
         おいさっ！
-  
+
   .input--erea
-    .input--erea__box
-      .input--erea__box__comment
-        type a message
+    %form.input--erea__box{:action => "/form.php", :method => "post"}
+      %input.input--erea__box__comment{:name => "message", :placeholder =>"type a message"}
       .input--erea__box__imgbtn
         %i.fa.fa-image
-    .input--erea__send
-      Send
+    %input.input--erea__send{:type => "submit", :value => "Send"}/
+    
+
+    -# .input--erea
+    -# .input--erea__box
+    -#   .input--erea__box__comment{:type => "text"}
+    -#     type a message
+    -#   .input--erea__box__imgbtn
+    -#     %i.fa.fa-image
+    -# .input--erea__send
+    -#   Send

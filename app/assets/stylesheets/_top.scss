@@ -2,7 +2,9 @@
   width: 300px;
   float: left;
   font-weight: bold;
-  color: #FFFFFF}
+  //color: $side-color;
+  color: #FFFFFF;
+}
 
 .side--header {
   background-color: #253141;
@@ -41,7 +43,6 @@
   display: flex;
   border-bottom: solid 1px #eee;
   font-size: 20px;
-  color: #333333;
   &__box__current--group{
     margin: 35px auto 0 0;
     float:left;
@@ -58,12 +59,11 @@
     font-size: 12px;
     position: absolute;
     top: calc(35px + 20px + 15px);
-    //height: calc(35px + 20px);
   }
 }
 
 .main--space {
-  height: calc(100vh - 293px);
+  height: calc(100vh - 263px);
   padding: 46px 40px;
   background-color: #fafafa;
   overflow: scroll;
@@ -82,7 +82,8 @@
       position: absolute;
       margin: 10px 0 0 0;
       font-size: 14px;
-      color :#434A54;
+      //color: $thin-color;
+      color: #434A54;
     }
   }
   &__box2{
@@ -103,45 +104,49 @@
       position: absolute;
       margin: 10px 0 0 0;
       font-size: 14px;
-      color :#434A54;
+      //color: $thin-color;
+      color: #434A54;
     }
   }
 }
 
-.input--erea {
-  height: 80px;
-  padding: 20px 40px;
+.input--erea{
   background: #ddd;
-  &__box{
-    height: 50px;
+  height: 90px;
+  &__box {
+    // height: 50px;
     width: 85%;
-    background: white;
-    padding: 17px 10px 17px 10px;
+    //background: white;
+    padding: 17px 10px 17px 40px;
+    //color: $thin-color;
     color: #434A54;
     float: left;
     &__comment{
+      height: 50px;
       width: 90%;
       float:left;
-      padding: 17px 10px 17px 10px;
+      padding: 0 40px 0 10px;
       font-size: 16px;
+      border: none;
     }
     &__imgbtn{
+      height: 50px;
       width: 10%;
-      //float:right;
-      //position: fixed;
       margin: 0 0 0 auto;
-      padding: 0 0 0 0;
+      padding: 0 0 0 10px;
       font-size: 30px;
+      background-color: #FFFFFF;
     }
   }
   &__send{
     height: 50px;
     width: 8%;
-    padding: 15px 0 15px 15px;
+    //padding: 17px 0 17px auto;
     float: right;
     background: #38AEF0;
-    color: white;
+    //color: $side-color;
+    color: #FFFFFF;
     font-size: 23px;
-    margin-left: 15px;
+    margin: 17px 40px 17px auto;
   }
 }
