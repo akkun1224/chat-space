@@ -21,23 +21,25 @@ a:visited {
     float: left;
     }
     &__menu{
-    float: right;
+    float:right;
     margin: 0 0 0 150px;
     color: $side-color;
     }
   }
 }
 
-.groups {
+.group {
   height: calc(100vh - 100px);
   background-color: #2f3e51;
   padding: 20px 20px 0;
   overflow: scroll;
   &__name{
     font-size: 15px;
+    padding: 0 0 5px;
   }
   &__title{
     font-size: 11px;
+    padding: 0 0 40px;
   }
 }
 
@@ -54,8 +56,8 @@ a:visited {
   border-bottom: solid 1px #eee;
   font-size: 20px;
   &__box__current--group{
-    margin: 35px auto 0 0;
-    float:left;
+    position: absolute;
+    top: 35px;
   }
   &__box__edit--btn{
     margin: 28px 0 32px auto;

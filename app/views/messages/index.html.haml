@@ -1,21 +1,5 @@
-.chat--side
-  .side--header
-    .side--header__box
-      .side--header__box__username
-        akkun
-      .side--header__box__menu
-        %side-header__box__menu__new-group
-        = link_to root_path do
-          %i.fa.fa-edit
-        %side-header__box__menu__edit-user
-        = link_to root_path do
-          %i.fa.fa-cog
-
-  .groups
-    .groups__name
-      博多部
-    .groups__title
-      まだメッセージがありません
+.wrapper
+  =render 'shared/chat--side'
 
 .chat--main
   .main--header
