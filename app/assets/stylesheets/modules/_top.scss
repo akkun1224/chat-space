@@ -32,7 +32,6 @@ a:visited {
   height: calc(100vh - 100px);
   background-color: #2f3e51;
   padding: 20px 20px 0;
-  overflow: scroll;
   &__name{
     font-size: 15px;
     padding: 0 0 5px;
@@ -74,12 +73,15 @@ a:visited {
   }
 }
 
-.main--space {
-  height: calc(100vh - 263px);
-  padding: 46px 40px;
-  background-color: #fafafa;
+.main--spaces {
   overflow: scroll;
-  &__box1{
+  height: 800px;
+ }
+
+.main--space {
+  padding: 46px 0 20px 40px;
+  background-color: #fafafa;
+    &__box{
     &__user{
       font-size: 16px;
       font-weight: bold;
@@ -91,67 +93,56 @@ a:visited {
       color: #999999;
     }
     &__message{
-      position: absolute;
       margin: 10px 0 0 0;
       font-size: 14px;
       color: $thin-color;
-    }
-  }
-  &__box2{
-    position: relative;
-    clear: left;
-    margin: 64px 0 0 0;
-    &__user{
-      font-size: 16px;
-      font-weight: bold;
-      margin: 0 10px 10px 0;
-      float: left;
-    }
-    &__time{
-      font-size: 12px;
-      color: #999999;
-     }
-    &__message{
-      position: absolute;
-      margin: 10px 0 0 0;
-      font-size: 14px;
-      color: $thin-color;
+      clear: both;
     }
   }
 }
 
+.image_resize{
+  max-width: 300px;
+  max-height: 300px;
+}
+
 .input--erea{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
   background: #ddd;
   height: 90px;
   &__box {
-    width: 85%;
+    width: 95%;
     padding: 17px 10px 17px 40px;
     color: $thin-color;
-    float: left;
     &__comment{
       height: 50px;
-      width: 90%;
+      width: 70%;
       float:left;
       padding: 0 40px 0 10px;
       font-size: 16px;
       border: none;
     }
     &__imgbtn{
+      float:left;
       height: 50px;
-      width: 10%;
+      width: 3%;
       margin: 0 0 0 auto;
-      padding: 0 0 0 10px;
+      padding: 0 10px 0 10px;
       font-size: 30px;
       background-color: #FFFFFF;
+      &__file{
+        display: none;
+      }
     }
   }
   &__send{
     height: 50px;
     width: 8%;
-    float: right;
+    float: left;
     background: #38AEF0;
     color: $side-color;
     font-size: 23px;
-    margin: 17px 40px 17px auto;
   }
 }

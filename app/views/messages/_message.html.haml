@@ -1,0 +1,11 @@
+.main--space
+  .main--space__box
+    .main--space__box__user
+      = message.user.name
+    .main--space__box__time
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+    .main--space__box__message
+      - if message.content.present?
+        %p.lower-message__content
+          = message.content
+      = image_tag message.image.url, class: 'image_resize' if message.image.present?
