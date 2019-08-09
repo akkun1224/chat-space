@@ -5,7 +5,7 @@ $(function(){
                     <a href=/users/${message.user_id}>${message.user_name}</a>
                     ：
                   </strong>
-                  ${message.text}
+                  ${message.content}
                 </p>`
     return html;
   }
@@ -25,5 +25,7 @@ $(function(){
     var html = buildHTML(data);
     $('.messages').append(html)
     $('.input--erea__box__comment').val('')
+    $('.main--spaces').animate({ scrollTop: $('.main--spaces')[0].scrollHeight},'fast');
   })
+})
 })
