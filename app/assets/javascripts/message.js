@@ -1,15 +1,45 @@
 $(function(){
   function buildHTML(message){
-    var html = `<p>
-                  <strong>
-                    <a href=/users/${message.user_id}>${message.user_name}</a>
-                    ：
-                  </strong>
-                  ${message.content}
-                </p>`
+    if ( message.image ) {
+    var html = 
+      `<div class="main--space" data-message-id=${message.id}>
+        <div class="main--space__box">
+          <div class="main--space__box__user">
+            ${message.user_name}
+          </div>
+        <div class="main--space__box__time">
+          ${message.date}
+        </div>
+       </div>
+      <div class="main--space__box__message">
+        <p class="lower-message__content">
+          ${message.content}
+        </p>
+      </div>
+      <asset_path src=${message.image} >
+     </div>`
     return html;
-  }
-  $('#new_message').on('submit', function(e){
+  } else {
+    var html =
+    `<div class="main--space" data-message-id=${message.id}>
+       <div class="main--space__box">
+         <div class="main--space__box__user">
+           ${message.user_name}
+         </div>
+         <div class="main--space__box__time">
+           ${message.date}
+         </div>
+       </div>
+       <div class="main--space__box__message">
+         <p class="lower-message__content">
+           ${message.content}
+         </p>
+       </div>
+     </div>`
+   return html;
+ };
+}
+  $('.new_message').on('submit', function(){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
@@ -26,6 +56,12 @@ $(function(){
     $('.messages').append(html)
     $('.input--erea__box__comment').val('')
     $('.main--spaces').animate({ scrollTop: $('.main--spaces')[0].scrollHeight},'fast');
+    $('form')[0].reset();
+    // location.href = url + position;
   })
-})
+  .fail(function(){
+    alert('error');
+  });
+    return false;
+  });
 })
