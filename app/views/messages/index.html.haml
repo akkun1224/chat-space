@@ -15,7 +15,7 @@
  
   .input--erea
     .input--erea__box
-      = form_for [@group, @message], :html => {:class => '.new_message'} do |f|
+      = form_for [@group, @message], :html => {:class => 'new_message'} do |f|
         = f.text_field :content, class: 'input--erea__box__comment', placeholder: 'type a message'
         .input--erea__box__imgbtn
           = f.label :image do
