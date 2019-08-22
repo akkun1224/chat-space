@@ -34,16 +34,13 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      console.log("テスト");
       $('.main--spaces').append(html);
       $('.input--erea__box__comment').val('')
       $('.main--spaces').animate({ scrollTop: $('.main--spaces')[0].scrollHeight})
-      // $('form')[0].reset();
-      // location.href = url + position;
     })
     .fail(function(){
       alert('error');
     });
-    return false;
+    $('submit').prop('disabled', true);
   });
 })
