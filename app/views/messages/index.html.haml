@@ -6,7 +6,7 @@
     .main--header__box__current--group
       = @group.name
     .main--header__box__edit--btn
-      = link_to edit_group_path(@group.id) do
+      = link_to edit_group_path(@group) do
         Edit
     .main--header__box__current--user
       Member :
@@ -17,7 +17,7 @@
  
   .input--erea
     .input--erea__box
-      = form_for [@group, @message], html: { class: 'new_message'} do |f|
+      = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'input--erea__box__comment', placeholder: 'type a message'
         .input--erea__box__imgbtn
           = f.label :image do

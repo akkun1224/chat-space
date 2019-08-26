@@ -41,6 +41,6 @@ $(function(){
     .fail(function(){
       alert('error');
     });
-    $('submit').prop('disabled', true);
+    $('input--erea__send').prop('disabled', true);
   });
 })
